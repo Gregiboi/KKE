@@ -54,6 +54,7 @@ h2,h3,h4,h5,h6 {
     -webkit-text-fill-color: transparent;
 }
 
+
 .button {
     background: rgb(0,212,255);
     background: linear-gradient(90deg, rgba(0,212,255,1) 17%, rgb(36, 118, 162) 94%);
@@ -69,7 +70,16 @@ h2,h3,h4,h5,h6 {
     position: center;
     border-radius: 6px;
     min-width: 150px;
+
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 1s;
 }
+
+.button:hover {
+    background: linear-gradient(90deg, rgb(61, 223, 255) 17%, rgb(69, 154, 199) 94%);
+
+}
+
 .button2 {
     background: rgb(0,212,255);
     background: linear-gradient(90deg, rgba(0,212,255,1) 17%, rgb(36, 118, 162) 94%);
@@ -85,7 +95,16 @@ h2,h3,h4,h5,h6 {
     position: center;
     border-radius: 6px;
     width: 200px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 1s;
 }
+
+.button2:hover {
+    background: linear-gradient(90deg, rgb(61, 223, 255) 17%, rgb(69, 154, 199) 94%);
+
+}
+
+
 .gbutton2 {
     background: rgb(65, 94, 100);
     background: linear-gradient(90deg, rgb(116, 134, 136) 17%, rgb(96, 110, 120) 94%);
@@ -101,6 +120,8 @@ h2,h3,h4,h5,h6 {
     position: center;
     border-radius: 6px;
     width: 200px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
 }
 
 .topnav {
@@ -123,7 +144,7 @@ h2,h3,h4,h5,h6 {
 }
   
 .topnav a.active {
-    background-color: rgb(8, 178, 212);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 17%, rgb(58, 192, 233) 94%);
     color: white;
 }
 
