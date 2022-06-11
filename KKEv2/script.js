@@ -36,3 +36,9 @@ const body = document.querySelector('body'),
     modeSwitch.addEventListener("click" , () =>{
     body.classList.toggle("dark");
     });
+
+    function checkInput() {
+        var query = document.getElementById('search').value;
+        window.find(query);
+        return true;
+    }
