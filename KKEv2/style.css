@@ -22,7 +22,8 @@
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
-    --text-grad: #00799e;
+    --text-grad: #229fda;
+    --back-grad: linear-gradient(90deg, rgba(0,212,255,1) 20%, rgb(42, 173, 206) 90%);
 
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
@@ -32,7 +33,6 @@
 
 body{
     min-height: 100vh;
-    
     background-color: var(--body-color);
     background-image: var(--background-image);
     transition: var(--tran-05);
@@ -70,7 +70,7 @@ body.dark{
     width: 88px;
 }
 
-/* Reusable code ===== */
+/* Reusable code */
 .sidebar li{
     height: 50px;
     list-style: none;
@@ -300,7 +300,6 @@ body.dark .switch::before{
     left: 250px;
     height: 100vh;
     width: calc(100% - 250px);
-    /* background-color: var(--body-color); */
     transition: var(--tran-05);
 }
 .home .text{
@@ -318,7 +317,7 @@ body.dark .switch::before{
 body.dark .home .text{
     color: var(--text-color);
 }
-/* darkmode fix test */
+/* darkmode fix */
 .nav-bar .darkLight-searchBox{
     display: flex;
     align-items: center;
@@ -358,73 +357,38 @@ body.dark .home .text{
     pointer-events: none;
 }
 
-
-/* Old CSS ===== */
-
+/* BUTTONS */
+.button, .sbutton, .gbutton {
+    background: var(--back-grad);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: center;
+    border-radius: 6px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
 .button {
-    background: rgb(0,212,255);
-    background: linear-gradient(90deg, rgba(0,212,255,1) 20%, rgb(42, 173, 206) 90%);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    position: center;
-    border-radius: 6px;
     min-width: 200px;
-
-    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
+    background: var(--back-grad);
 }
-
-.button:hover {
-    background: linear-gradient(90deg, rgb(0, 174, 209) 20%, rgb(35, 144, 172) 90%);
-}
-
 .sbutton {
-    background: rgb(0,212,255);
-    background: linear-gradient(90deg, rgba(0,212,255,1) 20%, rgb(42, 173, 206) 90%);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    position: center;
-    border-radius: 6px;
-
-    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
+    background: var(--back-grad);
 }
-
+.gbutton {
+    background: linear-gradient(90deg, rgb(116, 134, 136) 17%, rgb(96, 110, 120) 94%);
+    min-width: 200px;
+}
 .sbutton:hover {
     background: linear-gradient(90deg, rgb(0, 174, 209) 20%, rgb(35, 144, 172) 90%);
 }
-
-.gbutton {
-    background: rgb(65, 94, 100);
-    background: linear-gradient(90deg, rgb(116, 134, 136) 17%, rgb(96, 110, 120) 94%);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    position: center;
-    border-radius: 6px;
-    width: 200px;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(2, 2, 2, 0.123);
-    transition-duration: 0.4s;
+.button:hover {
+    background: linear-gradient(90deg, rgb(0, 174, 209) 20%, rgb(35, 144, 172) 90%);
 }
 
 .title {
@@ -458,25 +422,3 @@ body.dark .home .text{
     position: relative;
     padding-left: 60px;
 }
-
-
-/* search */
-.highlighted
-        {
-            background-color: yellow;
-        }
-        .highlight
-        {
-            background-color: #fff34d;
-            -moz-border-radius: 5px; /* FF1+ */
-            -webkit-border-radius: 5px; /* Saf3-4 */
-            border-radius: 5px; /* Opera 10.5, IE 9, Saf5, Chrome */
-            -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* FF3.5+ */
-            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Saf3.0+, Chrome */
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Opera 10.5+, IE 9.0 */
-        }
-        .highlight
-        {
-            padding: 1px 4px;
-            margin: 0 -4px;
-        }
