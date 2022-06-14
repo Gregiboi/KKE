@@ -89,10 +89,14 @@
                 <h1>KODUTÖÖD 1-2</h1>
                 <nav>   
                     <input id='fileid' type='file' multiple accept=".xls,.xlsx" hidden />
-                    <input id='buttonid' type='button' class="button" value='Upload' />
-                    <button id="clearfiles" class="button">Clear Files</button>
+                    <input id='buttonid' type='button' class="button" value='Lae üles' />
+                    <button id="clearfiles" class="cbutton">Tühjenda</button>
                 </nav>
-                <ul style="font-size: 16px; margin-top: 16px; list-style: none;" id="files-container"></ul>
+                <nav class="text">   
+                    <button class="gbutton" type="button" onclick="alert('Controlling - coming soon!')">Контроль</button>
+                </nav>
+
+                <ul id="files-container"></ul>
             </header>
         </div>
 

@@ -90,9 +90,13 @@
                 <nav>   
                     <input id='fileid' type='file' multiple accept=".xls,.xlsx" hidden />
                     <input id='buttonid' type='button' class="button" value='Upload' />
-                    <button id="clearfiles" class="button">Clear Files</button>
+                    <button id="clearfiles" class="cbutton nav-link" onclick="alert('Cleared SELECTED files!')">CLEAR</button>                    
                 </nav>
-                <ul style="font-size: 16px; margin-top: 16px; list-style: none;" id="files-container"></ul>
+                <nav class="text">   
+                    <button class="gbutton" type="button" onclick="alert('Controlling - coming soon!')">Control</button>
+                </nav>
+
+                <ul id="files-container"></ul>
             </header>
         </div>
 

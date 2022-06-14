@@ -90,9 +90,13 @@
                 <nav>   
                     <input id='fileid' type='file' multiple accept=".xls,.xlsx" hidden />
                     <input id='buttonid' type='button' class="button" value='Загрузить' />
-                    <button id="clearfiles" class="button">чистый</button>
+                    <button id="clearfiles" class="cbutton">чистый</button>
                 </nav>
-                <ul style="font-size: 16px; margin-top: 16px; list-style: none;" id="files-container"></ul>
+                <nav class="text">   
+                    <button class="gbutton" type="button" onclick="alert('Controlling - coming soon!')">Контроль</button>
+                </nav>
+
+                <ul id="files-container"></ul>
             </header>
         </div>
 
