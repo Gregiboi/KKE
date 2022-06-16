@@ -13,7 +13,7 @@
   }
 
 
-:root{
+  :root{
     /* Colors */
     --background-image: url("images/bglightalt.jpg");
     --body-color: #E4E9F7;
@@ -394,14 +394,14 @@ body.dark .home .text{
     padding: 15px 32px;
     font-size: 16px;
     margin: 4px 2px;
-    width: 130px;
+    width: 150px;
 }
 .cbutton {
     background: linear-gradient(90deg, rgb(74, 118, 128) 20%, rgb(40, 114, 132) 90%);
     padding: 15px 32px;
     font-size: 16px;
     margin: 4px 2px;
-    width: 130px;
+    width: 150px;
 }
 .mini-button {
     background: var(--back-grad);
@@ -437,7 +437,7 @@ body.dark .home .text{
     padding-right: min(15px, 5%);
     text-align: center;
     font-size: 60px;
-    color: var(--text-color);
+    color: var(--alt-color);
 }
 
 .heading {
@@ -445,7 +445,7 @@ body.dark .home .text{
     padding-right: min(25px, 5%);
     text-align: center;
     font-size: 60px;
-    color: var(--text-color);
+    color: var(--alt-color);
 }
 
 .grad {
@@ -471,6 +471,42 @@ body.dark .home .text{
     list-style: none;
 }
 
+/* DRAG AND DROP WINDOW */
 
-
-
+.drag-area{
+    border: 3px dashed var(--alt-color);
+    height: 500px;
+    max-width: 50%;
+    padding: 100px;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .drag-area.active{
+    border: 2px solid var(--alt-color);
+  }
+  .drag-area .icon{
+    font-size: 100px;
+    color: var(--alt-color);
+  }
+  .drag-area header{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--alt-color);
+  }
+  .drag-area span{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--alt-color)f;
+    margin: 10px 0 15px 0;
+  }
+  .drag-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }

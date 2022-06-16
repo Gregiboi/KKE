@@ -10,8 +10,8 @@ const months = ["Январь", "Февраль", "Март", "Апрель", "�
 const notes = JSON.parse(localStorage.getItem("notes") || "[]");
 let isUpdate = false, updateId;
 addBox.addEventListener("click", () => {
-    popupTitle.innerText = "Добавить новую ноту";
-    addBtn.innerText = "Добавлять";
+    popupTitle.innerText = "Добавить новую запись";
+    addBtn.innerText = "Добавить";
     popupBox.classList.add("show");
     document.querySelector("body").style.overflow = "hidden";
     if(window.innerWidth > 660) titleTag.focus();

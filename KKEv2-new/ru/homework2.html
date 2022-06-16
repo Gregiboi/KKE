@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="../upload.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <title>KKE</title>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>KKE</title>    
 </head>
 <body>
     
@@ -63,7 +62,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../homework2.html">
+                    <a href="../homework1.html">
                         <img class="flag" src="../images/rur.svg" alt="">
                         <span class="text nav-text lang-text">Русский</span>
                     </a>
@@ -79,27 +78,39 @@
             </div>
         </div>
     </nav>
-
     <section class="home fade-in-image">
         <div class="text">
             <p><a class="sbutton" href="homeworks.html">Назад</a></p>
         </div>
         <div>
-            <header class="heading" class="text">
+            <header class="heading text">
                 <h1>ДОМАШНЕЕ ЗАДАНИЕ 1-2</h1>
-                <nav>   
-                    <input id='fileid' type='file' multiple accept=".xls,.xlsx" hidden />
-                    <input id='buttonid' type='button' class="button" value='Загрузить' />
-                    <button id="clearfiles" class="cbutton">чистый</button>
+                <br>
+                <nav style="zoom:90%" class="drag-area">
+                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <header>Перетащите, чтобы загрузить</header>
+                    <span>или</span>
+                    <input id='fileid' type='file' title=hidden multiple accept=".xls,.xlsx" hidden />
+                    <input id='buttonid' type='button' class="up-button" value='Загрузить' />
+                    <button id="clearfiles" class="cbutton nav-link" onclick="alert('Удалил все файлы!')">Очистить</button>
                 </nav>
                 <nav class="text">   
-                    <button class="gbutton" type="button" onclick="alert('Controlling - coming soon!')">Контроль</button>
+                    <button class="down-button" type="button" onclick="shell.openPath(firstPath)">Проверить & <i class="fas fa-solid fa-download"></i></button>
+                    <button class="mini-button" type="button" onclick="shell.openPath(secondPath)"><i class="fas fa-folder-open" aria-hidden="true"></i></button>
                 </nav>
+                <script>
+                    const path = require("path");
+                    const { app, shell } = require("electron")
+                    var firstPath = "../homework1-2.exe";
+                    var resolvedPath = path.resolve(firstPath);
 
+                    var secondPath = "../homework1_2.zip"
+                    var resolvedPathSecond = path.resolve(secondPath);
+                </script>
+                
                 <ul id="files-container"></ul>
             </header>
         </div>
-
     </section>
 
     <script type="text/javascript" src="../script.js"></script>

@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="../upload.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <title>KKE</title>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>KKE</title>    
 </head>
 <body>
     
@@ -63,7 +62,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../ru/homework3.html">
+                    <a href="../ru/homework1.html">
                         <img class="flag" src="../images/eer.svg" alt="">
                         <span class="text nav-text lang-text">Eesti</span>
                     </a>
@@ -85,21 +84,34 @@
             <p><a class="sbutton" href="homeworks.html">Tagasi</a></p>
         </div>
         <div>
-            <header class="heading" class="text">
-                <h1>KODUTÖÖ 1-3</h1>
-                <nav>   
-                    <input id='fileid' type='file' multiple accept=".xls,.xlsx" hidden />
-                    <input id='buttonid' type='button' class="button" value='Lae üles' />
-                    <button id="clearfiles" class="cbutton">Tühjenda</button>
+            <header class="heading text">
+                <h1>Kodutöö 1-3</h1>
+                <br>
+                <nav style="zoom:90%" class="drag-area">
+                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <header>'Tõmba ja Vabasta' üleslaadimiseks</header>
+                    <span>või</span>
+                    <input id='fileid' type='file' title=hidden multiple accept=".xls,.xlsx" hidden />
+                    <input id='buttonid' type='button' class="up-button" value='LAE ÜLES' />
+                    <button id="clearfiles" class="cbutton nav-link" onclick="alert('Cleared SELECTED files!')">TÜHJENDA</button>
                 </nav>
                 <nav class="text">   
-                    <button class="gbutton" type="button" onclick="alert('Controlling - coming soon!')">Контроль</button>
+                    <button class="down-button" type="button" onclick="shell.openPath(firstPath)">KONTROLLI & <i class="fas fa-solid fa-download"></i></button>
+                    <button class="mini-button" type="button" onclick="shell.openPath(secondPath)"><i class="fas fa-folder-open" aria-hidden="true"></i></button>
                 </nav>
+                <script>
+                    const path = require("path");
+                    const { app, shell } = require("electron")
+                    var firstPath = "../homework1-3.exe";
+                    var resolvedPath = path.resolve(firstPath);
 
+                    var secondPath = "../homework1_3.zip"
+                    var resolvedPathSecond = path.resolve(secondPath);
+                </script>
+                
                 <ul id="files-container"></ul>
             </header>
         </div>
-
     </section>
 
     <script type="text/javascript" src="../script.js"></script>
